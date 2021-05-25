@@ -14,11 +14,15 @@
         <div class="todoList">
             <input type="text" id="todoText">
             <button id="addTask" onclick="addTask()"><i class="fas fa-plus-square"></i></button>
-            <button id="addTask" onclick="deleteTask()"><i class="fas fa-trash"></i></button>
+            <button id="deleteTask" onclick="deleteTask()"><i class="fas fa-trash"></i></button>
         </div>
+
         <ul id="todoListTasks">
-           <li>Café</li> <input type="checkbox" class="taskCheck"> <button onclick="deleteTask(1)" class="taskDelete"><i class="fas fa-trash"></i></button>
+        <div>
+            <li id="1" >Café <input type='checkbox' class='taskCheck'><button onclick='deleteTask(1)' class='taskDelete'><i class='fas fa-trash'></i></button></li>
+        
         </ul>
+        </div>
     </div>
 
     <script src="app.js" type="text/javascript"></script>
