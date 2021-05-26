@@ -30,6 +30,18 @@ body{
     color: white;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    animation: load 3.5s forwards;
+    transition: all ease;
+}
+
+@keyframes load{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .container h1{
@@ -45,8 +57,6 @@ body{
 }
 
 #todoText{
-    font-size: 1.5rem;
-    font-weight: lighter;
     width: 100%;
     height: 5vh;
     border-radius: 10px 0px 0px 10px;
@@ -58,9 +68,11 @@ body{
 
 .todoList input[type=text]{
     font-weight: lighter;
+    font-size: 1.5rem;
 }
 
 #addTask{
+    cursor: pointer;
     font-size: 1.5rem;
     width: 5vh;
     height: 5vh;
@@ -108,6 +120,7 @@ li:hover{
 }
 
 .taskDelete{
+    cursor: pointer;
     font-size: 1.5rem;
     grid-column: 3;
     grid-row: 1;
@@ -118,6 +131,7 @@ li:hover{
 }
 
 .taskCheck{
+    cursor: pointer;
     grid-column: 2;
     grid-row: 1;
     width: 3vh;
@@ -126,6 +140,14 @@ li:hover{
 
 .checked{
     text-decoration: line-through;
+    background:rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+}
+
+.checked:hover{
+    transition: all 0.3 ease;
+    background: rgb(109, 109, 109);
+    color: #fff;
 }
 
 @media only screen and (max-width: 1000px) {

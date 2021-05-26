@@ -9,11 +9,10 @@ function addTask(){
         document.getElementById('todoText').value = "";
         let task = document.getElementById('todoListTasks').innerHTML += 
         "<li id="+ itemId +" >" + todoInput 
-        +"<input type='checkbox' class='taskCheck' onclick='checkTask("+ itemId +")'><button onclick='deleteTask("+ itemId +")' class='taskDelete'><i class='fas fa-trash'></i></button></li>"
+        +"<input type='checkbox' class='taskCheck' id='checkBtn' onclick='checkTask("+ itemId +")'><button id='removeTask' onclick='deleteTask("+ itemId +")' class='taskDelete'><i class='fas fa-trash'></i></button></li>"
     }
     else{
-        alert('Insira uma tarefa');
-        checkedTask = false;
+        alert('Por favor inserir um texto');
     }
     
 }
@@ -24,4 +23,6 @@ function deleteTask(value){
 
 function checkTask(value){
     let Task = document.getElementById(value).classList.toggle('checked');
+    document.getElementById('removeTask').classList.toggle('checked');
+    document.getElementById('checkBtn').classList.toggle('checked');
 }
